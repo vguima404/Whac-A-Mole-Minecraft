@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root{
+  --black: #000;
+  --green: #3eca22;
+  --transition: .5s;
+  --white: #fff;
+}
+
 @font-face {
     font-family: 'Mine';
     src: url('../fonts/Minecraft.ttf') format('truetype');
@@ -19,4 +26,3 @@ body{
   font-family: 'Mine', sans-serif;
   font-size: 1.6rem;
 }
-
