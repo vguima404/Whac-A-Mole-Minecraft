@@ -4,3 +4,19 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Mine';
+    src: url('../fonts/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Mine', sans-serif;
+  font-size: 1.6rem;
+}
+
