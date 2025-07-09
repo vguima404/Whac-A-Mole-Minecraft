@@ -25,4 +25,35 @@ html{
 body{
   font-family: 'Mine', sans-serif;
   font-size: 1.6rem;
+  
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--black);
+  color: var(--green);
+  border-bottom: 10px solid var(--green);
+  font-size: 2rem;
+}
+
+.menu-lifes{
+  display: flex;
+  gap: 2.2rem;
+  & img{
+    width: 5rem;
+  }
+}
+
+.numbers{
+  display: flex;
+  margin-top: 1rem;
+  color: var(--white);
 }
