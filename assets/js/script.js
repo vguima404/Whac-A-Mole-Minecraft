@@ -6,8 +6,13 @@ const state = {
     enemy: document.querySelector('.enemy')
   },
   values: {
-
+    timerId: null,
+    interval: 1000,
   },
+}
+
+function moveEnemy () {
+  state.values.timerId = setInterval(randomSquare, state.values.interval)
 }
 
 function randomSquare () {
@@ -22,7 +27,7 @@ function randomSquare () {
 
 
 function init(){
-  randomSquare();
+  moveEnemy();
 }
 
 init();
