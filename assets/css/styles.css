@@ -31,17 +31,24 @@ body{
 main{
   display: flex;
   flex-direction: column;
-
+  min-height: 100vh;
+  background-image: url(../images/wp8643134.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .menu{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--black);
-  color: var(--green);
-  border-bottom: 10px solid var(--green);
+  background-color: transparent;
+  color: var(--black);
   font-size: 2rem;
+
+  & h2{
+    margin-top: 1rem;
+  }
+  
 }
 
 .menu-lifes{
@@ -56,4 +63,31 @@ main{
   display: flex;
   margin-top: 1rem;
   color: var(--white);
+}
+
+.panel{
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-row{
+  display: flex;
+}
+
+.square{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid var(--white);
+  height: 20rem;
+  width: 20rem;
+  background-color: transparent;
+
+  & img{
+    width: 100%;
+  }
+
 }
