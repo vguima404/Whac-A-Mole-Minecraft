@@ -32,7 +32,7 @@ main{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url(../images/wp8643134.jpg);
+  background-image: url(../images/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -90,4 +90,10 @@ main{
     width: 100%;
   }
 
+}
+
+.enemy{
+  background-image: url(../images/Minecraft-Creeper-PNG-Image-HD.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
