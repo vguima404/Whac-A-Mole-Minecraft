@@ -29,11 +29,6 @@ function countDown(){
   }
 }
 
-function moveEnemy () {
-  state.values.timerId = setInterval(randomSquare, state.values.interval)
-}
-
-
 function randomSquare () {
   state.view.squares.forEach((square) => {
     square.classList.remove('enemy');
@@ -45,25 +40,31 @@ function randomSquare () {
   randomSquare.classList.add('enemy')
 }
 
+function moveEnemy () {
+  state.values.timerId = setInterval(randomSquare, state.values.interval)
+}
+
 function addListenerHitBox(){
   state.view.squares.forEach((square) => {
     square.addEventListener('mousedown', () =>{
       if (square.id !== state.values.hitPosition){
         state.values.lifes--;
         state.view.lifesView.textContent = ("x") + state.values.lifes;
-
+        playAudio("Minecraft Hit - Sound Effect (HD).mp3");
         if (state.values.lifes === 2){
           state.view.steve.src = "./assets/images/halfZombie.png"
         }
         else if(state.values.lifes === 1){
           state.view.steve.src = "./assets/images/zombieFace.png"
         }
+
         if (state.values.lifes <= 0){
           state.view.lifesView.textContent = ("x0");
           state.view.steve.src = "./assets/images/skeletonFace.png"
+
           setTimeout(() => {
           alert(`Game Over! Sua pontuação foi: ${state.values.result}`)
-          
+
           state.view.steve.src = "./assets/images/steve.jpg"
           state.view.lifesView.textContent = ("x3");
           state.values.lifes = 3;
@@ -76,12 +77,22 @@ function addListenerHitBox(){
       }
       if (square.id === state.values.hitPosition){
         state.values.result++
+        playAudio('coinSfx.mp3')
         state.view.score.textContent = state.values.result;
         state.values.hitPosition = null;
+
       }
     })
   })
 }
+
+function playAudio(audioName){
+  let hitAudio = new Audio(`./assets/audios/${audioName}`);
+
+  hitAudio.volume = 0.2;
+
+  hitAudio.play();
+};
 
 function init(){
   moveEnemy();
