@@ -25,7 +25,6 @@ html{
 body{
   font-family: 'Mine', sans-serif;
   font-size: 1.6rem;
-  
 }
 
 main{
@@ -96,4 +95,43 @@ main{
   background-image: url(../images/Minecraft-Creeper-PNG-Image-HD.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 599px){
+  .square{
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 425px){
+  .menu{
+    font-size: 1.5rem;
+
+    & img{
+      margin-top: 0.85rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+@media (max-width: 320px){
+  .menu{
+    font-size: 1.25rem;
+
+    & img{
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  .menu-lifes{
+    gap: 1rem;
+
+    & img{
+      margin-bottom: 0.83rem;
+    }
+  }
+  
 }
